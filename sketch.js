@@ -3,6 +3,7 @@
 //might do something else
 /*To Do:
   -add more colors
+  -change variables in splatter function
   -other things to try:
       -ribbons
       -exploding shapes
@@ -47,7 +48,7 @@ function mouseMoved(){
 	if(frameCount%7==0){
 		splatter(mouseX, mouseY);
 		//splatter(width-mouseY, height-mouseX);
-		stipple(mouseX, mouseY, 255);
+		stipple(mouseX, mouseY, 0);
 		//stipple(width-mouseX, height-mouseY, 255);
 	}
 }
@@ -56,7 +57,7 @@ function drizzle(){
 	let s = 1+30/dist(brush.px, brush.py, brush.x, brush.y);
 	s=min(20,s);
 	strokeWeight(s);
-	stroke(255);
+	stroke(0);
 	line(brush.px, brush.py, brush.x, brush.y);
 	stroke(0);
 	//line(width-brush.px, height-brush.py, width-brush.x, height-brush.y);
