@@ -10,9 +10,11 @@ function setup() {
 
   colorPicker = createColorPicker('#000000') //stipple
   colorPicker2 = createColorPicker('#000000') //stroke
- 
+  //colorPicker3 = createColorPicker('#000000') extra
+
   //noCursor()
-	noStroke();
+	noStroke();	
+
 	seed = random(500);
 	colors = [
   color(251,248,204), 
@@ -36,17 +38,21 @@ function setup() {
   color(88, 10, 255),
   color(190, 10, 255),
  ]
+
 	let base = floor(random(colors.length));
-	background(colors[base]);
+  background(colors[base]);
 	colors.splice(base,1);
 }
 
 function draw() {
-	brush.x+=(mouseX-brush.x)/12;
+	
+  brush.x+=(mouseX-brush.x)/12;
 	brush.y+=(mouseY-brush.y)/12;
 	if(mouseIsPressed){
 		drizzle();
+    
 	}
+  
 	brush.px=brush.x;
  	brush.py=brush.y;
 
@@ -98,10 +104,3 @@ function stipple(bx, by, c){
 	radius = random(3, 12);
 	ellipse(bx+random(-30,30), by+random(30,-30), radius);
 }
-
-/*function keyPressed(){
-	if(keyCode==32){
-		background(180);
-	}
-}
-*/
