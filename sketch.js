@@ -9,7 +9,9 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 
   colorPicker = createColorPicker('#000000') //stipple
+  colorPicker.position(0,0)
   colorPicker2 = createColorPicker('#000000') //stroke
+  colorPicker2.position(0,30)
   //colorPicker3 = createColorPicker('#000000') extra
 
   //noCursor()
