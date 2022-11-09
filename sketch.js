@@ -1,5 +1,3 @@
-/*created using Pollock Splatter Zen by kwertyops
-*/
 let colorPicker;
 let colors = [];
 let brush = { x:0, y:0, px:0, py:0}
